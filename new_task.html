@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    
+        <title>Together</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <link href="css/base.css" rel="stylesheet">
+        <link href="css/page.css" rel="stylesheet">
+        <link href="bootstrap/plugins/datepicker.css" rel="stylesheet">
+    
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+  </head>
+  <body>
+  	<a class="sr-only" href="#content">Skip navigation</a>
+    
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+      <div class="container">
+        <div class="navbar-header t_header">
+        	<a href="#" class="navbar-toggle"><span class="glyphicon glyphicon-user gray"></span></a>
+        	<a href="tasks.html" class="navbar-toggle float_l"><span class="glyphicon glyphicon-arrow-left red"></span></a>
+        	<a href="../" class="navbar-brand">Together</a>
+        </div>
+       
+      </div>
+    </header>
+    
+    <!--main-->
+    <div class="bs-header" id="content">
+      <div class="container">
+<!--        <h2>do anythings with friends</h2>        
+-->      </div>
+    </div>
+    <div class="container">
+         <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="inputEmail1" class="col-lg-2 control-label">Task name</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="task_name" placeholder="the task's name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword1" class="col-lg-2 control-label">Dutyer</label>
+            <div class="col-lg-10">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="who duty this task">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Friends <span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right">
+                      <li><a href="#">Lucy</a></li>
+                      <li><a href="#">Jim</a></li>
+                      <li><a href="#">zhaoweixiong</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">gzp</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="begin_date" class="col-lg-2 control-label">Begin_date</label>
+            <div class="col-lg-4">
+				<input type="text" id="begin_date" value="02-16-2012" class=" form-control">
+            </div>
+
+           	<label for="end_date" class="col-lg-2 control-label">End_date</label>
+            <div class="col-lg-4">
+              <input type="text" id="end_date" value="02-16-2012" class=" form-control">
+            </div>
+          </div>
+          <div class="form-group">
+           	<label for="description" class="col-lg-2 control-label">Description</label>
+            <div class="col-lg-10">
+              <textarea class="form-control" rows="3" placeholder="the description about this task"></textarea>
+            </div>
+          </div>
+          <div class="form-group setting_more">
+           	<label for="description1" class="col-lg-2 control-label">Description 1</label>
+            <div class="col-lg-10">
+              <textarea class="form-control" rows="3" placeholder="the description about this task"></textarea>
+            </div>
+          </div>
+          <div class="form-group setting_more">
+           	<label for="description2" class="col-lg-2 control-label">Description 2</label>
+            <div class="col-lg-10">
+              <textarea class="form-control" rows="3" placeholder="the description about this task"></textarea>
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <a  class="btn btn-default btn-block btn-lg setting_more_btn" >more</a>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <a type="submit" class="btn btn-primary btn-block btn-lg" href="tasks.html">save</a>
+            </div>
+          </div>
+        </form>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="bootstrap/plugins/bootstrap-datepicker.js"></script>
+     <script>
+	 	    $('#begin_date').datepicker();
+			$('#end_date').datepicker();
+			
+			//bind more button
+			$('.setting_more_btn').bind('click',function(){
+				if($('.setting_more').css('display')=='none'){
+					$('.setting_more').show();
+					$('.setting_more_btn')[0].text='less';
+				}
+				else{
+					$('.setting_more').hide();
+				}
+			})
+	 </script>
+  </body>
+</html>
